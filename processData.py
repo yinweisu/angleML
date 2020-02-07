@@ -12,4 +12,7 @@ with open(str(csv_file_name), mode='w') as csv_file, open (str(text_file_name), 
     for line in lines:
         widthHeightRatio = line.split("|")[0].split(":")[1]
         pitch = line.split("|")[1].split(":")[1]
-        test_writer.writerow([widthHeightRatio, pitch])
+        roll = line.split("|")[2].split(":")[1]
+        width = line.split("|")[3].split(":")[1]
+        height = line.split("|")[4].split(":")[1]
+        test_writer.writerow([widthHeightRatio, pitch, roll, width, height])
